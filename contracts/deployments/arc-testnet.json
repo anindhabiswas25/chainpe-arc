@@ -1,0 +1,30 @@
+{
+  "network": "arcTestnet",
+  "chainId": 5042002,
+  "chainPeRegistryProxy": "0x79c7a22993A40A3c88355b737e6F608c6610c395",
+  "chainPeRegistryImpl": "0xE528F6731D345634d98B408475A1e6A4b8242eDB",
+  "proxy": {
+    "address": "0x79c7a22993A40A3c88355b737e6F608c6610c395",
+    "txHash": "0x11ad5022651388711d44a81ae4c8f32e328be30960a840e7e67ceb11f42ba3af",
+    "block": 66993614,
+    "explorer": "https://explorer.testnet.arc.io/address/0x79c7a22993A40A3c88355b737e6F608c6610c395",
+    "txExplorer": "https://explorer.testnet.arc.io/tx/0x11ad5022651388711d44a81ae4c8f32e328be30960a840e7e67ceb11f42ba3af"
+  },
+  "implementation": {
+    "address": "0xE528F6731D345634d98B408475A1e6A4b8242eDB",
+    "txHash": "0x5bf8d6f2460986905b24dd2be06a83faf9ad5903a61a85747c6eefd4e99fc903",
+    "block": 66993610,
+    "explorer": "https://explorer.testnet.arc.io/address/0xE528F6731D345634d98B408475A1e6A4b8242eDB",
+    "txExplorer": "https://explorer.testnet.arc.io/tx/0x5bf8d6f2460986905b24dd2be06a83faf9ad5903a61a85747c6eefd4e99fc903"
+  },
+  "initData": "0x33e1a223000000000000000000000000360000000000000000000000000000000000000000000000000000000000000091cf2b2fc03e8fefc8669b767c5eaaabeffa029100000000000000000000000000000000000000000000000000000000000f42400000000000000000000000008004a818bfb912233c491871b3d84c89a494bd9e00000000000000000000000091cf2b2fc03e8fefc8669b767c5eaaabeffa0291",
+  "deployBlock": 66993614,
+  "feeToken": "0x3600000000000000000000000000000000000000",
+  "feeRecipient": "0x91cF2b2FC03E8feFC8669B767C5eaaaBefFA0291",
+  "registrationFee": "1000000",
+  "identityRegistry": "0x8004A818BFB912233c491871b3d84c89A494BD9e",
+  "owner": "0x91cF2b2FC03E8feFC8669B767C5eaaaBefFA0291",
+  "deployer": "0x91cF2b2FC03E8feFC8669B767C5eaaaBefFA0291",
+  "deployedAt": "2026-10-13T13:09:34.758Z",
+  "upgradeable": true
+}

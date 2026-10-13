@@ -1,0 +1,15 @@
+{
+  "name": "chainpe-proxy",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "ChainPe x402 payment proxy for Arc Testnet — reads config from environment variables",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "@chainpearc/cli": "file:../../packages/chainpe"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -1,0 +1,43 @@
+# ChainPe — multi-surface agent examples
+
+The **same** ChainPe discover + paid-fetch tools, driving two different agent
+frameworks plus the CLI. This is the "it's infrastructure, not a Claude-only
+app" proof: one payment + reputation core, many surfaces.
+
+| Surface | Entry | Tools |
+|---|---|---|
+| Vercel AI SDK | `vercel-agent.ts` | `@chainpearc/ai-tools/vercel` |
+| LangChain (ReAct) | `langchain-agent.ts` | `@chainpearc/ai-tools/langchain` |
+| CLI (curl-level) | `chainpe fetch <url>` | `@chainpearc/cli` → `@chainpearc/sdk` |
+
+All three settle USDC on Arc Testnet through the same `@chainpearc/sdk` core.
+
+## Setup
+
+```bash
+cp .env.example .env     # CHAINPE_PRIVATE_KEY + ANTHROPIC_API_KEY
+npm install              # links the local @chainpearc/* packages (build them first)
+```
+
+> Build the workspace packages once from the repo root so the `file:` links
+> resolve: `npm install && npm run build`.
+
+The paying wallet needs a little USDC on Arc Testnet (get it at <https://faucet.circle.com>, select Arc Testnet). Gas is paid by the provider's facilitator.
+
+## Run
+
+```bash
+# Vercel AI SDK agent
+npm run vercel -- "Discover a service on ChainPe and call it"
+
+# LangChain agent (same tools, same result)
+npm run langchain -- "Discover a service on ChainPe and call it"
+
+# CLI — no LLM needed
+chainpe discover                              # browse, ranked by ⭐ reputation
+chainpe fetch https://your-service/endpoint   # auto-pays the 402 in USDC
+```
+
+To have something live to pay, run one of the sibling example APIs behind a
+ChainPe proxy (`../weather-api.mjs` → `chainpe init/start/register`), or a seller
+agent from `examples/seller-agents/` (Phase 3).

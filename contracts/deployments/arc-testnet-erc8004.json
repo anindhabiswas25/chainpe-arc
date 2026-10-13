@@ -1,0 +1,33 @@
+{
+  "network": "arc-testnet",
+  "chainId": 5042002,
+  "source": "Arc canonical ERC-8004 registries (https://docs.arc.io/arc/references/contract-addresses)",
+  "deployedByChainPe": false,
+  "identityRegistry": {
+    "address": "0x8004A818BFB912233c491871b3d84c89A494BD9e",
+    "version": "2.0.0",
+    "implementation": "0x7274e874CA62410a93Bd8bf61c69d8045E399c02",
+    "owner": "0x547289319C3e6aedB179C0b8e8aF0B5ACd062603",
+    "explorer": "https://explorer.testnet.arc.io/address/0x8004A818BFB912233c491871b3d84c89A494BD9e"
+  },
+  "reputationRegistry": {
+    "address": "0x8004B663056A597Dffe9eCcC1965A193B7388713",
+    "version": "2.0.0",
+    "implementation": "0x16e0FA7f7C56B9a767E34B192B51f921BE31dA34",
+    "owner": "0x547289319C3e6aedB179C0b8e8aF0B5ACd062603",
+    "explorer": "https://explorer.testnet.arc.io/address/0x8004B663056A597Dffe9eCcC1965A193B7388713",
+    "identityRegistry": "0x8004A818BFB912233c491871b3d84c89A494BD9e"
+  },
+  "validationRegistry": {
+    "address": "0x8004Cb1BF31DAf7788923b405b754f57acEB4272",
+    "version": "2.0.0",
+    "implementation": "0xDB31f5d9167f8ebc8B30FbBF814c4d297c2D7F99",
+    "owner": "0x547289319C3e6aedB179C0b8e8aF0B5ACd062603",
+    "explorer": "https://explorer.testnet.arc.io/address/0x8004Cb1BF31DAf7788923b405b754f57acEB4272",
+    "identityRegistry": "0x8004A818BFB912233c491871b3d84c89A494BD9e"
+  },
+  "identityRegistryAddress": "0x8004A818BFB912233c491871b3d84c89A494BD9e",
+  "reputationRegistryAddress": "0x8004B663056A597Dffe9eCcC1965A193B7388713",
+  "validationRegistryAddress": "0x8004Cb1BF31DAf7788923b405b754f57acEB4272",
+  "checkedAt": "2026-10-13T09:33:10.447Z"
+}

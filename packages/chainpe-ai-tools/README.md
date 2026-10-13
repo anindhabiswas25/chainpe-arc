@@ -1,0 +1,86 @@
+# @chainpearc/ai-tools
+
+**Drop-in ChainPe tools for AI agents** — let any Vercel AI SDK or LangChain agent
+**discover, pay for, and rate** HTTP APIs and other agents per request in USDC on
+Arc Testnet. Thin adapters over [`@chainpearc/sdk`](../chainpe-sdk).
+
+Two tools per framework:
+
+- **`chainpeFetch` / `chainpe_fetch`** — call a URL; if it returns `402 Payment
+  Required`, pay it automatically in USDC (EIP-3009) and return the result.
+- **`discoverService` / `discover_service`** — browse the on-chain marketplace,
+  ranked by ERC-8004 reputation.
+
+```bash
+npm install @chainpearc/ai-tools @chainpearc/sdk
+# plus your framework: `ai` (Vercel AI SDK) or `@langchain/core`
+```
+
+> `@chainpearc/*` is not published to npm yet. Until it is, build this repo (`npm install && npm run build`) and install by path: `npm install /path/to/ChainPe/packages/chainpe-ai-tools`.
+
+## Vercel AI SDK
+
+```ts
+import { generateText, stepCountIs } from 'ai'
+import { anthropic } from '@ai-sdk/anthropic'
+import { createChainPeTools } from '@chainpearc/ai-tools/vercel'
+
+const tools = createChainPeTools({
+  privateKey: process.env.PRIVATE_KEY!, // Arc Testnet, live contracts by default
+  autoFeedback: true // leave on-chain reputation after each paid call
+})
+
+const { text } = await generateText({
+  model: anthropic('claude-opus-4-8'),
+  tools,
+  stopWhen: stepCountIs(8),
+  prompt: 'Find a summarizer agent on ChainPe and summarize today\'s top AI news.'
+})
+```
+
+## LangChain
+
+```ts
+import { ChatAnthropic } from '@langchain/anthropic'
+import { createReactAgent } from '@langchain/langgraph/prebuilt'
+import { createChainPeLangChainTools } from '@chainpearc/ai-tools/langchain'
+
+const { chainpeFetchTool, discoverServiceTool } = createChainPeLangChainTools({
+  privateKey: process.env.PRIVATE_KEY!,
+  autoFeedback: true
+})
+
+const agent = createReactAgent({
+  llm: new ChatAnthropic({ model: 'claude-opus-4-8' }),
+  tools: [discoverServiceTool, chainpeFetchTool]
+})
+```
+
+## Options
+
+`createChainPeTools(options)` / `createChainPeLangChainTools(options)` take the same
+options as [`new ChainPe(...)`](../chainpe-sdk#api) — `privateKey`, plus optional
+`registryAddress`, `reputationRegistry`, `maxPerCall`, `autoFeedback` — or a
+pre-built client via `{ client }`:
+
+```ts
+import { ChainPe } from '@chainpearc/sdk'
+const client = new ChainPe({ privateKey })
+const tools = createChainPeTools({ client })
+```
+
+## Custom frameworks
+
+The framework-agnostic core is exported from the package root, so you can wire the
+same logic into any tool-calling runtime:
+
+```ts
+import { fetchInputSchema, runFetch, getClient } from '@chainpearc/ai-tools'
+
+const client = getClient({ privateKey })
+const result = await runFetch(client, { url: 'https://api.example.com/paid' })
+```
+
+## License
+
+MIT

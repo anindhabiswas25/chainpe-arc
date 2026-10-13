@@ -1,0 +1,26 @@
+{
+  "network": "arcTestnet",
+  "chainId": 5042002,
+  "policyVaultProxy": "0xcD5f994A57d7846c3DdFb471cBf4EdA0Bcf43a81",
+  "policyVaultImpl": "0xcebEd51c2D30E4053A387eAD80c43a5dD03343f1",
+  "proxy": {
+    "address": "0xcD5f994A57d7846c3DdFb471cBf4EdA0Bcf43a81",
+    "txHash": "0x604b403793e81783b8ed35fd0ed185e0f74201b4f9172176ce73e42c2815e5e8",
+    "block": 66993676,
+    "explorer": "https://explorer.testnet.arc.io/address/0xcD5f994A57d7846c3DdFb471cBf4EdA0Bcf43a81",
+    "txExplorer": "https://explorer.testnet.arc.io/tx/0x604b403793e81783b8ed35fd0ed185e0f74201b4f9172176ce73e42c2815e5e8"
+  },
+  "implementation": {
+    "address": "0xcebEd51c2D30E4053A387eAD80c43a5dD03343f1",
+    "txHash": "0x5f3d63a99a96710f8d5dede59c3a6fb832a6d1a9aaf0f6aa53ea8e1d42d5ebfb",
+    "block": 66993668,
+    "explorer": "https://explorer.testnet.arc.io/address/0xcebEd51c2D30E4053A387eAD80c43a5dD03343f1",
+    "txExplorer": "https://explorer.testnet.arc.io/tx/0x5f3d63a99a96710f8d5dede59c3a6fb832a6d1a9aaf0f6aa53ea8e1d42d5ebfb"
+  },
+  "initData": "0x485cc955000000000000000000000000360000000000000000000000000000000000000000000000000000000000000091cf2b2fc03e8fefc8669b767c5eaaabeffa0291",
+  "token": "0x3600000000000000000000000000000000000000",
+  "owner": "0x91cF2b2FC03E8feFC8669B767C5eaaaBefFA0291",
+  "deployer": "0x91cF2b2FC03E8feFC8669B767C5eaaaBefFA0291",
+  "deployedAt": "2026-10-13T13:10:05.796Z",
+  "upgradeable": true
+}

@@ -1,0 +1,22 @@
+{
+  "network": "arcTestnet",
+  "chainId": 5042002,
+  "timelock": "0x5071794F30C32604Be115c00Ed041c403fB2f302",
+  "deployment": {
+    "address": "0x5071794F30C32604Be115c00Ed041c403fB2f302",
+    "txHash": "0x3b56bfe80002d76b9a81db29f280efb788a11a8b6d56f4824f55346081d992ff",
+    "block": 66993733,
+    "explorer": "https://explorer.testnet.arc.io/address/0x5071794F30C32604Be115c00Ed041c403fB2f302",
+    "txExplorer": "https://explorer.testnet.arc.io/tx/0x3b56bfe80002d76b9a81db29f280efb788a11a8b6d56f4824f55346081d992ff"
+  },
+  "minDelay": 172800,
+  "proposers": [
+    "0x91cF2b2FC03E8feFC8669B767C5eaaaBefFA0291"
+  ],
+  "executors": [
+    "0x91cF2b2FC03E8feFC8669B767C5eaaaBefFA0291"
+  ],
+  "admin": "0x0000000000000000000000000000000000000000",
+  "deployer": "0x91cF2b2FC03E8feFC8669B767C5eaaaBefFA0291",
+  "deployedAt": "2026-10-13T13:10:34.568Z"
+}
